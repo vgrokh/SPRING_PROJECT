@@ -21,6 +21,14 @@ public class Developer {
     private String firstName;
     @Column(name = "lastname")
     private String lastName;
+
+//    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    //@Fetch(FetchMode.JOIN)
+//    @JoinTable(
+//            name = "developerteams",
+//            joinColumns = {@JoinColumn(name="developerid") },
+//            inverseJoinColumns = { @JoinColumn(name="teamid")}
+//    )
 //    private List<Speciality> specialities;
 //    private Team team;
 }

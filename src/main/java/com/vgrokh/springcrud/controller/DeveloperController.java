@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/developers")
+@RequestMapping("/api/developers")
 public class DeveloperController {
 
     @Autowired
@@ -20,13 +20,13 @@ public class DeveloperController {
         return developerRepository.findById(id);
     }
 
-    @GetMapping(path= "/all")
+    @GetMapping(path= "/get/all")
     public @ResponseBody Iterable<Developer> getAllDevelopers() {
         return developerRepository.findAll();
     }
 
     @DeleteMapping(path= "/delete/{id}")
-    public void deleteDeveloperBuId(@PathVariable long id){
+    public void deleteDeveloperById(@PathVariable long id){
         developerRepository.deleteById(id);
     }
 
@@ -35,5 +35,6 @@ public class DeveloperController {
         Developer developer = new Developer();
         developer.setFirstName(firstName);
         developer.setLastName(lastName);
+        developerRepository.save(developer);
     }
 }
