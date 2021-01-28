@@ -17,7 +17,10 @@ public class Team {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private int name;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "status")
+    @Enumerated(EnumType.STRING)
+    private TeamStatus status;
 //    private List<Developer> developers;
-//    private TeamStatus status;
 }

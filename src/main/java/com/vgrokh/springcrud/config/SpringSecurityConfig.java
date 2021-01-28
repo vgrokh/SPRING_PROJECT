@@ -32,12 +32,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/**").hasAuthority(Authority.DEVELOPERS_WRITE.getAuthority())
-                .antMatchers(HttpMethod.POST, "/api/**").hasAuthority(Authority.DEVELOPERS_WRITE.getAuthority())
-                .antMatchers(HttpMethod.DELETE, "api/**").hasAuthority(Authority.DEVELOPERS_WRITE.getAuthority())
-                .anyRequest().authenticated()
-                .and()
-                .formLogin();
+                .antMatchers("/**").permitAll();
+//                .antMatchers(HttpMethod.GET, "/api/**").hasAuthority(Authority.DEVELOPERS_WRITE.getAuthority())
+//                .antMatchers(HttpMethod.POST, "/api/**").hasAuthority(Authority.DEVELOPERS_WRITE.getAuthority())
+//                .antMatchers(HttpMethod.DELETE, "api/**").hasAuthority(Authority.DEVELOPERS_WRITE.getAuthority())
+                //.anyRequest().authenticated()
+              //  .and()
+                //.formLogin();
     }
 
     @Override

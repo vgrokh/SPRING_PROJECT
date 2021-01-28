@@ -16,7 +16,10 @@ public class Speciality {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name="name")
     private String name ;
+    @Column(name="created")
     private long created;
+    @Column(name="updated")
     private long updated;
 }

@@ -20,6 +20,5 @@
         <property name="hibernate.connection.password">
             password
         </property>
-        <mapping class="com.vgrokh.springcrud.model.Developer"/>
     </session-factory>
 </hibernate-configuration>
