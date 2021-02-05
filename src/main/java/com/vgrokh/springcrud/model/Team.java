@@ -22,5 +22,10 @@ public class Team {
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     private TeamStatus status;
-//    private List<Developer> developers;
+    @OneToMany(
+            mappedBy = "developer",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Developer> developers;
 }

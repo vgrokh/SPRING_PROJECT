@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/api/teams")
+@RequestMapping("/api/v1/teams")
 public class TeamController {
 
     @Autowired

@@ -28,6 +28,7 @@ public class Developer {
             inverseJoinColumns = { @JoinColumn(name="specialityid")}
     )
     private List<Speciality> specialities;
-//    private Team team;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Team team;
 }
 

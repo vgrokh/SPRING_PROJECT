@@ -12,7 +12,7 @@ import java.util.Optional;
 
 
 @Controller
-@RequestMapping("/api/specialities")
+@RequestMapping("/api/v1/specialities")
 public class SpecialityController {
 
     @Autowired

@@ -4,5 +4,10 @@
       "name": "liquibase.change-log",
       "type": "java.lang.String",
       "description": "Description for liquibase.change-log."
-  }
-] }
+    },
+    {
+      "name": "security.ignored",
+      "type": "java.lang.String",
+      "description": "Description for security.ignored."
+    }
+  ] }

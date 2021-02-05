@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/api/developers")
+@RequestMapping("/api/v1/developers")
 public class DeveloperController {
 
     @Autowired
