@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Base64;
 import java.util.Date;
 
-@Component
+@Component("jwtTokenProvider")
 public class JwtTokenProvider {
 
     @Autowired

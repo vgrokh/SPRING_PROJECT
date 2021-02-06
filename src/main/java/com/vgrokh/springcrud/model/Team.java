@@ -22,10 +22,11 @@ public class Team {
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     private TeamStatus status;
-    @OneToMany(
-            mappedBy = "developer",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "teamsdevelopers",
+            joinColumns = {@JoinColumn(name="teamid") },
+            inverseJoinColumns = { @JoinColumn(name="developerid")}
     )
     private List<Developer> developers;
 }

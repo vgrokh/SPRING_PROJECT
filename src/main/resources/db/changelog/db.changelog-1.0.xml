@@ -141,4 +141,42 @@
         </sql>
     </changeSet>
 
+    <changeSet  id="9"  author="vgrokh">
+        <preConditions>
+            <not>
+                <tableExists tableName="teamsdevelopers"/>
+            </not>
+        </preConditions>
+        <createTable tableName="teamsdevelopers">
+            <column  name="teamid"  type="bigint"  autoIncrement="true">
+                <constraints nullable="false" unique="false"/>
+            </column>
+            <column  name="developerid"  type="bigint"  autoIncrement="true">
+                <constraints nullable="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="10"  author="vgrokh">
+        <sql>
+            ALTER TABLE teamsdevelopers
+            ADD CONSTRAINT fk_team_id_cascade
+            FOREIGN KEY (teamid)
+            REFERENCES teams (id)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE
+        </sql>
+    </changeSet>
+
+    <changeSet  id="11"  author="vgrokh">
+        <sql>
+            ALTER TABLE teamsdevelopers
+            ADD CONSTRAINT fk_developer_id_cascade
+            FOREIGN KEY (developerid)
+            REFERENCES developers (id)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE
+        </sql>
+    </changeSet>
+
 </databaseChangeLog>
