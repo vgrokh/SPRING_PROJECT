@@ -22,11 +22,7 @@ public class Team {
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     private TeamStatus status;
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "teamsdevelopers",
-            joinColumns = {@JoinColumn(name="teamid") },
-            inverseJoinColumns = { @JoinColumn(name="developerid")}
-    )
+    //ToDo: Fix recursive many-to-many relationship
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="team")
     private List<Developer> developers;
 }

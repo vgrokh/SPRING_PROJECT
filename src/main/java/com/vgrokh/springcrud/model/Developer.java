@@ -28,7 +28,12 @@ public class Developer {
             inverseJoinColumns = { @JoinColumn(name="specialityid")}
     )
     private List<Speciality> specialities;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Team team;
+    @ManyToMany
+    @JoinTable(
+            name = "teamsdevelopers",
+            joinColumns = {@JoinColumn(name="developerid") },
+            inverseJoinColumns = { @JoinColumn(name="teamid")}
+    )
+    private List<Team> team;
 }
 
