@@ -25,7 +25,6 @@ public class Team {
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     private TeamStatus status;
-    //ToDo: Fix recursive many-to-many relationship
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="team")
     private List<Developer> developers;
 }
