@@ -19,7 +19,7 @@ public class TwilioControler {
 
     private final SmsService smsService;
     private final UserRepository userRepository;
-    @Value("${twilio.generated_password}")
+    @Value("${twilio.gp}")
     private String generatedPassword;
 
     @Autowired
