@@ -19,8 +19,6 @@ public class TwilioControler {
 
     private final SmsService smsService;
     private final UserRepository userRepository;
-    @Value("${twilio.gp}")
-    private String generatedPassword;
 
     @Autowired
     public TwilioControler(SmsService smsService, UserRepository userRepository) {
@@ -33,7 +31,8 @@ public class TwilioControler {
     public void sendSms(@RequestBody  SmsRequest smsRequest){
         String email = smsRequest.getEmail();
         String userName = smsRequest.getUserName();
-        User userToRegister = new User(email, userName, generatedPassword, Role.USER, Status.ACTIVE);
+        String password = System.getenv().get("GENERATED_PASSWORD");
+        User userToRegister = new User(email, userName, password, Role.USER, Status.ACTIVE);
        try {
            userRepository.save(userToRegister);
            smsService.sendSms(smsRequest);

@@ -10,12 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @NoArgsConstructor
 public class TwilioConfiguration {
 
-    @Value("${twilio.ac}")
-    private  String accountSid;
-    @Value("${twilio.at}")
-    private  String authToken;
-    @Value("${twilio.tn}")
-    private String trialNumber;
-    @Value("${twilio.gp}")
-    private String generatedPassword;
+    String accountSid = System.getenv().get("ACCOUNT_SID");
+    String authToken = System.getenv().get("AUTH_TOKEN");
+    String trialNumber = System.getenv().get("PHONE_NUMBER");
+    String generatedPassword = System.getenv().get("GENERATED_PASSWORD");
 }
