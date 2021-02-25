@@ -24,10 +24,10 @@ public class SmsSender implements SmsSendable {
         PhoneNumber to = new PhoneNumber(twilioConfiguration.getTrialNumber());
         String email = smsRequest.getEmail();
         String userName = smsRequest.getUserName();
-        String messageToSend = "Your registration is successful!" +
-                                "UserName: " + userName +
-                                " Email: " + email +
-                                " Password: " + twilioConfiguration.getGeneratedPassword();
+        String messageToSend =  "Your registration is successful! \n" +
+                                "UserName: " + userName + "\n" +
+                                "Email: " + email + "\n" +
+                                "Password: " + twilioConfiguration.getGeneratedPassword();
         MessageCreator creator = Message.creator(from, to, messageToSend);
         creator.create();
     }
