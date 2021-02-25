@@ -96,9 +96,9 @@
                   <artifactId>liquibase-maven-plugin</artifactId>
                   <configuration>
                       <changeLogFile>src/main/resources/db/changelog/db.changelog-1.0.xml</changeLogFile>
-                      <url>jdbc:postgresql://localhost:5432/springdb</url>
-                      <username>user</username>
-                      <password>password</password>
+                      <url>postgres://xkbyaysdpekjvp:7d8cb2d7a0d7195414cb9f925c1712ba50bb53a3c2b75849b29fb2f40723d666@ec2-3-87-180-131.compute-1.amazonaws.com:5432/d611ad1psh9umk</url>
+                      <username>xkbyaysdpekjvp</username>
+                      <password>7d8cb2d7a0d7195414cb9f925c1712ba50bb53a3c2b75849b29fb2f40723d666</password>
                   </configuration>
                   <executions>
                       <execution>
