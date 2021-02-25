@@ -27,7 +27,7 @@ public class SmsSender implements SmsSendable {
         String messageToSend =  "Your registration is successful! \n" +
                                 "UserName: " + userName + "\n" +
                                 "Email: " + email + "\n" +
-                                "Password:  " + twilioConfiguration.getGeneratedPassword();
+                                "Password: " + twilioConfiguration.getGeneratedPassword();
         MessageCreator creator = Message.creator(from, to, messageToSend);
         creator.create();
     }
