@@ -11,7 +11,7 @@
     <groupId>com.vgrokh</groupId>
     <artifactId>springcrud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcrud</name>
+    <name>SPRING_PROJECT</name>
     <description>Spring pet crud project</description>
 
     <properties>
