@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar target/springcrud-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS -jar target/dependency/springcrud-0.0.1-SNAPSHOT.jar --port $PORT
