@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 public class SpringcrudApplication {
 
     public static void main(String[] args) {
+        System.getProperties().put( "server.port", System.getenv().get("PORT"));
         SpringApplication.run(SpringcrudApplication.class, args);
     }
 
