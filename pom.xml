@@ -92,9 +92,9 @@
                   <artifactId>liquibase-maven-plugin</artifactId>
                   <configuration>
                       <changeLogFile>src/main/resources/db/changelog/db.changelog-1.0.xml</changeLogFile>
-                      <url>jdbc:postgresql://ec2-3-87-180-131.compute-1.amazonaws.com:5432/d611ad1psh9umk</url>
-                      <username>xkbyaysdpekjvp</username>
-                      <password>7d8cb2d7a0d7195414cb9f925c1712ba50bb53a3c2b75849b29fb2f40723d666</password>
+                      <url>jdbc:postgresql://vrcqwuoluinxdz:9a839fec753788520ebe3fbaf748196752d2f805d8d355f0fd9bbb0b8543e78b@ec2-54-146-73-98.compute-1.amazonaws.com:5432/d9cfgkbg8polr</url>
+                      <username>vrcqwuoluinxdz</username>
+                      <password>9a839fec753788520ebe3fbaf748196752d2f805d8d355f0fd9bbb0b8543e78b</password>
                   </configuration>
                   <executions>
                       <execution>
