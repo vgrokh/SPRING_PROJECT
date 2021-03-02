@@ -18,13 +18,13 @@ public class SpecialityController {
     @Autowired
     private SpecialityRepository specialityRepository;
 
-    @GetMapping(path = "/get/{id}")
+    @GetMapping(path = "/{id}")
     public @ResponseBody
     Optional<Speciality> getSpecialityById(@PathVariable long id){
         return specialityRepository.findById(id);
     }
 
-    @GetMapping(path= "/get/all")
+    @GetMapping
     public @ResponseBody Iterable<Speciality> getAllSpecialities() {
         return specialityRepository.findAll();
     }

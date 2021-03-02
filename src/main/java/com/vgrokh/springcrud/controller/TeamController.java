@@ -17,12 +17,12 @@ public class TeamController {
     @Autowired
     private TeamRepository teamRepository;
 
-    @GetMapping(path = "/get/{id}")
+    @GetMapping(path = "{id}")
     public @ResponseBody Optional<Team> getTeamById(@PathVariable long id){
         return teamRepository.findById(id);
     }
 
-    @GetMapping(path= "/get/all")
+    @GetMapping
     public @ResponseBody Iterable<Team> getAllTeams() {
         return teamRepository.findAll();
     }

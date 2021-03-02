@@ -15,12 +15,12 @@ public class DeveloperController {
     @Autowired
     private DeveloperRepository developerRepository;
 
-    @GetMapping(path = "/get/{id}")
+    @GetMapping(path = "/{id}")
     public @ResponseBody Optional<Developer> getDeveloperById(@PathVariable long id){
         return developerRepository.findById(id);
     }
 
-    @GetMapping(path= "/get/all")
+    @GetMapping
     public @ResponseBody Iterable<Developer> getAllDevelopers() {
         return developerRepository.findAll();
     }
